@@ -1,10 +1,8 @@
 class script(object):
     START_TXT = """Hiii!! 🤩 🍿Welcome to the largest movies and series database on net!Inline Search DISABLED 🚫 Press /help for Pm Search Tutorial"""
-    SOURCE_TXT = """𝙷𝙴𝚈 {}𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙷𝙴𝙻𝙿 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+    SOURCE_TXT = """<b>DISCLAIMER!! It is forbidden to download, stream, reproduce, or by any means, share, or consume, content without explicit permission from the content creator or legal copyright holder.. If you believe this bot is violating your intellectual property, contact the respective channels for removal. The Bot does not own any of these contents, it only index the files from telegram."""
     ABOUT_TXT = """<a href=https://t.me/MCAdda>ℹ️ **Powered by MOVIE COFFEE**</a></b>""" 
-    HELP_TXT = """<b>DISCLAIMER!!
-It is forbidden to download, stream, reproduce, or by any means, share, or consume, content without explicit permission from the content creator or legal copyright holder.. If you believe this bot is violating your intellectual property, contact the respective channels for removal.
-The Bot does not own any of these contents, it only index the files from telegram."""
+    SOURCE_TXT = """<b>DISCLAIMER!! It is forbidden to download, stream, reproduce, or by any means, share, or consume, content without explicit permission from the content creator or legal copyright holder.. If you believe this bot is violating your intellectual property, contact the respective channels for removal.The Bot does not own any of these contents, it only index the files from telegram."""
 
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
