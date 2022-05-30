@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """Hiii!! 🤩 🍿Welcome to the largest movies and series database on net!Inline Search DISABLED 🚫 Press /help for Pm Search Tutorial"""
+    START_TXT = """Hiii!! 🤪 🍿Welcome to the largest movies and series database on net!Inline Search DISABLED 🚫 Press Button ℹ️ help for Pm Search Tutorial"""
     SOURCE_TXT = """<b>DISCLAIMER!! It is forbidden to download, stream, reproduce, or by any means, share, or consume, content without explicit permission from the content creator or legal copyright holder.. If you believe this bot is violating your intellectual property, contact the respective channels for removal. The Bot does not own any of these contents, it only index the files from telegram."""
     HELP_TXT = """<a href=https://t.me/MCAdda>ℹ️ </b>Powered by MOVIE COFFEE</a></b>""" 
     SOURCE_TXT = """<b>DISCLAIMER!! It is forbidden to download, stream, reproduce, or by any means, share, or consume, content without explicit permission from the content creator or legal copyright holder.. If you believe this bot is violating your intellectual property, contact the respective channels for removal.The Bot does not own any of these contents, it only index the files from telegram."""
