@@ -425,16 +425,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👥GroupChat', url='https://t.me/McoffeeChat')
             ],[
             InlineKeyboardButton('⚠️ Disclaimer ⚠️', callback_data='source'),
-            ],[
-            elif query.data == "source":
+            ]]
+            reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ABOUT_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html
+        )
+     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
         )
     elif query.data == "about":
         buttons = [[
