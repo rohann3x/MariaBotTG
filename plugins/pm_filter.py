@@ -419,7 +419,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
         await query.answer('Piracy Is Crime')
-    elif query.data == "help":
+    elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
             InlineKeyboardButton('Auto Filter', callback_data='autofilter')
@@ -436,7 +436,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "about":
+    elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('🆘Tutorial', callback_data='help'),
             InlineKeyboardButton('👥GroupChat', url='https://t.me/McoffeeChat')
