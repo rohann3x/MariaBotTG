@@ -426,8 +426,9 @@ elif query.data == "help":
             ],[
             InlineKeyboardButton('⚠️ Disclaimer ⚠️', callback_data='source'),
             ],[
-            InlineKeyboardButton('🔙 Back', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            elif query.data == "source":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
