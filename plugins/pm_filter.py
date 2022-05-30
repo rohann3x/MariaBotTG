@@ -435,15 +435,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
      elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='start')
-        ]]
+            ]]
         )
-    elif query.data == "about":
+     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🆘Tutorial', callback_data='help'),
             InlineKeyboardButton('👥GroupChat', url='https://t.me/McoffeeChat')
             ],[
             InlineKeyboardButton('⚠️ Disclaimer ⚠️', callback_data='source'),
-        ]]
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
