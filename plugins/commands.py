@@ -68,7 +68,7 @@ async def start(client, message):
             await msg.reply_text(
                 text=Config.FORCE_SUB_TEXT.format(msg.from_user.mention),
                 reply_markup=Import.Markup([
-                    [ Import.Button(text="🔔 𝖩𝗈𝗂𝗇", url=f"https://t.me/{Config.FORCE_CHANNEL}"),
+                    [ Import.Button(text="🔔 𝖩𝗈𝗂𝗇", url=f"https://t.me/{Config.AUTH_CHANNEL}"),
                       Import.Button(text="𝖱𝖾𝖿𝗋𝖾𝗌𝗁 🔃", url=f"https://t.me/{Config.BOT_USERNAME}?start={file_uid}")]       
               ])
             )
