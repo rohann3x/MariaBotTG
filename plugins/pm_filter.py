@@ -418,32 +418,31 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
-     elif query.data == "help":
-        buttons = [[
-            InlineKeyboardButton('🆘Tutorial', callback_data='help'),
-            InlineKeyboardButton('👥GroupChat', url='https://t.me/McoffeeChat')
+     await query.answer('Piracy Is Crime')
+         elif query.data == "help":
+             buttons = [[
+            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
+            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
             ],[
-            InlineKeyboardButton('⚠️ Disclaimer ⚠️', callback_data='source'),
-            ]]
-            reply_markup = InlineKeyboardMarkup(buttons)
+            InlineKeyboardButton('Connection', callback_data='coct'),
+            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            ],[
+            InlineKeyboardButton('🏠 Home', callback_data='start'),
+            InlineKeyboardButton('🔮 Status', callback_data='stats')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
+            text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
-            parse_mode='html
+            parse_mode='html'
         )
-     elif query.data == "source":
-        buttons = [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='start')
-            ]]
-        )
-     elif query.data == "about":
-        buttons = [[
+    elif query.data == "about":
+        buttons = 
             InlineKeyboardButton('🆘Tutorial', callback_data='help'),
             InlineKeyboardButton('👥GroupChat', url='https://t.me/McoffeeChat')
             ],[
             InlineKeyboardButton('⚠️ Disclaimer ⚠️', callback_data='source'),
-            ]]
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
