@@ -46,7 +46,7 @@ async def start(client, message):
             InlineKeyboardButton('🔥 New Movies', url='https://t.me/MCAdda')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('😾 admin ', url='https://t.me/MCAdda/7')
             ],[
             InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MCAdda/6'),
         ]]
@@ -92,7 +92,7 @@ async def start(client, message):
             InlineKeyboardButton('🔥 New Movies', url='https://t.me/MCAdda')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('😾 admin ', url='https://t.me/MCAdda/7')
             ],[
             InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MCAdda/6'),
         ]]
