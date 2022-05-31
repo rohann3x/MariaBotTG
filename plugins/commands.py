@@ -59,18 +59,25 @@ async def start(client, message):
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
-            user = await bot.get_chat_member(Config.FORCE_CHANNEL, msg.chat.id)
-            if user.status == "kicked out":
-               await msg.reply_text("😔 𝖲𝗈𝗋𝗋𝗒 𝖣𝗎𝖽𝖾, 𝖸𝗈𝗎 𝖺𝗋𝖾 ⚠️🅱︎🅰︎🅽︎🅽︎🅴︎🅳︎⚠️")
-               return
-        except Import.User:
-            userbot = await bot.get_me()
-            await msg.reply_text(
-                text=Config.FORCE_SUB_TEXT.format(msg.from_user.mention),
-                reply_markup=Import.Markup([
-                    [ Import.Button(text="🔔 𝖩𝗈𝗂𝗇", url=f"https://t.me/{Config.AUTH_CHANNEL}"),
-                      Import.Button(text="𝖱𝖾𝖿𝗋𝖾𝗌𝗁 🔃", url=f"https://t.me/{Config.BOT_USERNAME}?start={file_uid}")]       
-              ])
+            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channel")
+            return
+        btn = [
+            [
+                InlineKeyboardButton(
+                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                )
+            ]
+        ]
+
+        if message.command[1] != "subscribe":
+            btn.append([InlineKeyboardButton(" 🔄 Refresh", callback_data=f"checksub#{message.command[1]}")])
+        await client.send_message(
+            chat_id=message.from_user.id,
+            text="**Please Join My Updates Channel to use this Bot!**",
+            reply_markup=InlineKeyboardMarkup(btn),
+            parse_mode="markdown"
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
