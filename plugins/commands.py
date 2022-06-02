@@ -42,12 +42,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🔥 New Movies', url='https://t.me/MCAdda'),
+            InlineKeyboardButton('🔥 New Movies', url='https://t.me/MovieCoffee'),
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😾 admin ', url='https://t.me/MCAdda/7')
+            InlineKeyboardButton('😾 admin ', url='https://t.me/MovieCoffee/7')
             ],[
-            InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MCAdda/6'),
+            InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MovieCoffee/6'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -82,12 +82,12 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('🔥 New Movies', url='https://t.me/MCAdda'),
+            InlineKeyboardButton('🔥 New Movies', url='https://t.me/MovieCoffee'),
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😾 admin ', url='https://t.me/MCAdda/7')
+            InlineKeyboardButton('😾 admin ', url='https://t.me/MovieCoffee/7')
             ],[
-            InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MCAdda/6'),
+            InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MovieCoffee/6'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
