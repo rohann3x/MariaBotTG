@@ -395,12 +395,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('🔥 New Movies', url='https://t.me/MCAdda'),
+            InlineKeyboardButton('🔥 New Movies', url='https://t.me/MovieCoffee'),
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😾 admin ', url='https://t.me/MCAdda/7')
+            InlineKeyboardButton('😾 admin ', url='https://t.me/MovieCoffee/7')
             ],[
-            InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MCAdda/6'),
+            InlineKeyboardButton('⭐Rate 🙏 Me', url='https://t.me/MovieCoffee/6'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
